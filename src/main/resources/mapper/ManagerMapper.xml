@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xyz.system.jlaubus.mapper.ManagerMapper" >
+    <select id="getManagerById" resultType="xyz.system.jlaubus.entity.Manager" parameterType="String">
+        select * from managers where managerid = #{mid}
+    </select>
+    <select id="getAllManagers" resultType="xyz.system.jlaubus.entity.Manager">
+        select * from managers
+    </select>
+    <insert id="addManager" parameterType="xyz.system.jlaubus.entity.Manager">
+        insert into managers(name,password,state,managerid,telephone,role)
+        values(#{name},#{password},#{state},#{mid},#{telephone},#{role})
+    </insert>
+    <update id="updateManager" parameterType="xyz.system.jlaubus.entity.Manager">
+        update managers
+        set name=#{name},
+            password=#{password},
+            state=#{state},
+            telephone=#{telephone}
+            role=#{role}
+            where managerid = #{mid}
+    </update>
+    <delete id="deleteManagerById" parameterType="xyz.system.jlaubus.entity.Manager">
+        delete * from managers where managerid = #{mid} and role lt= 2
+    </delete>
+
+    <select id="getManager" parameterType="string" resultType="xyz.system.jlaubus.entity.Manager">
+        select * from managers where managerid = #{mid} and password = #{password}
+    </select>
+
+</mapper>
