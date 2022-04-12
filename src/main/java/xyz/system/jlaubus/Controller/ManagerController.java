@@ -5,16 +5,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import xyz.system.jlaubus.Service.IManagerService;
+import xyz.system.jlaubus.Service.ManagerService;
 import xyz.system.jlaubus.entity.Manager;
 import javax.servlet.http.HttpSession;
-import java.util.Map;
 
 @Controller
 public class ManagerController {
 
     @Autowired
-    private IManagerService managerService;
+    private ManagerService managerService;
 
     @RequestMapping(value = "/mng/login")
     public String login(String mid, String password, HttpSession session,

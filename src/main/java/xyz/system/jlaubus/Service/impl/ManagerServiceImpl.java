@@ -2,13 +2,13 @@ package xyz.system.jlaubus.Service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import xyz.system.jlaubus.Service.IManagerService;
+import xyz.system.jlaubus.Service.ManagerService;
 import xyz.system.jlaubus.entity.Manager;
 import xyz.system.jlaubus.mapper.ManagerMapper;
 
 import java.util.List;
 @Service
-public class ManagerService implements IManagerService {
+public class ManagerServiceImpl implements ManagerService {
 
     @Autowired
     private ManagerMapper managerMapper;

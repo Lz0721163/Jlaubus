@@ -4,17 +4,17 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/school_bus?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=Asia/Shanghai
     username: long
     password: 214017
-    type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      initial-size: 10
-      min-idle: 5
-      max-active: 20
-      query-timeout: 6000
-      transaction-query-timeout: 6000
-      remove-abandoned-timeout: 1800
-  devtools:
-    restart:
-      enabled: true
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    druid:
+#      initial-size: 10
+#      min-idle: 5
+#      max-active: 20
+#      query-timeout: 6000
+#      transaction-query-timeout: 6000
+#      remove-abandoned-timeout: 1800
+#  devtools:
+#    restart:
+#      enabled: true
 
   ##页面模板引擎
   thymeleaf:

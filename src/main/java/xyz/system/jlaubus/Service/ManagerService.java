@@ -4,7 +4,7 @@ import xyz.system.jlaubus.entity.Manager;
 
 import java.util.List;
 
-public interface IManagerService {
+public interface ManagerService {
 
     Manager getManager(String mid,String password);
 

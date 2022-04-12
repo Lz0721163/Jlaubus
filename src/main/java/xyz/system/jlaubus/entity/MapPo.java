@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Map {
+public class MapPo {
     private int id;
     private double longitude;
     private double latitude;
